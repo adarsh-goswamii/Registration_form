@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image"
+            android:layout_marginLeft="50dp"
+            android:text="Choose Image" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel2"
+        android:layout_below="@id/rel1">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:id="@+id/editName"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="50px"
+            android:hint="Email Address"
+            android:layout_below="@+id/editName"
+            android:id="@+id/editEmail"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:lines="4"
+            android:layout_below="@+id/editEmail"
+            android:id="@+id/editAddress"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:id="@+id/editPass"
+            android:layout_below="@+id/editAddress"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_below="@+id/editPass"
+            android:hint="Re-enter Password"
+            android:id="@+id/editRePass"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel3"
+        android:layout_toRightOf="@id/rel2"
+        android:layout_below="@id/rel1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textLicence"
+            android:layout_marginLeft="10dp"
+            android:text="We dont have any licence agreement so feel free to use this application as you want, Just enjoy.! It is a simple form filling application that has various constraints related to it"
+            android:textSize="50px"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkLicence"
+            android:layout_below="@+id/textLicence"
+            android:layout_centerHorizontal="true"
+            android:text="I Agree"
+            android:textSize="50px"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel4"
+        android:layout_below="@+id/rel2"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textGender"
+            android:text="Gender"
+            android:textSize="50px"
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/radioGroup"
+            android:layout_below="@+id/textGender">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="50px"
+                android:id="@+id/radioMale"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="50px"
+                android:id="@+id/radioFemale"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:textSize="50px"
+                android:id="@+id/radioOthers"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCountry"
+            android:text="Country"
+            android:textSize="50px"
+            android:layout_below="@+id/radioGroup" />
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textCountry"
+            android:entries="@array/SpinnerValue"
+            android:id="@+id/spinner"
+            android:layout_below="@+id/radioGroup"
+            android:layout_marginLeft="10dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textCountry"
+            android:layout_centerHorizontal="true"
+            android:text="Save"
+            android:id="@+id/buttonSave"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
